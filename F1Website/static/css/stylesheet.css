@@ -1,0 +1,262 @@
+@font-face {
+    font-family: formulaOneBold;
+    src: url(../fonts/Formula1-Bold.ttf);
+}
+
+@font-face {
+    font-family: formulaOneRegular;
+    src: url(../fonts/Formula1-Regular.ttf);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.row1 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box {
+    background-size: cover;
+}
+
+.row3 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.constructor {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.f1-uppercase {
+    text-transform: uppercase;
+}
+
+.driverimg {
+    width: 550px;
+    height: 500px;
+    object-fit: cover;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 4px;
+}
+
+.results {
+    overflow-y: auto;
+    height: 750px;
+}
+
+.results::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+
+.results::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+/* Handle */
+
+.results::-webkit-scrollbar-thumb {
+    background: #888;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+
+.results::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.top-span {
+    font-family: 'Bebas Neue', cursive;
+    height: 50px;
+}
+
+.navbar-img {
+    height: 50px;
+}
+
+.flag-box {
+    text-align: right;
+}
+
+.driver-flg {
+    height: 90px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 6px;
+}
+
+.driver-num {
+    font-family: formulaOneBold;
+    font-size: 55px;
+    font-weight: bold;
+    text-align: right;
+    font-style: italic;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+.driver-name {
+    font-family: formulaOneBold;
+    font-size: 50px;
+}
+
+.driver-helm {
+    text-align: right;
+}
+
+.card-banner {
+    border-radius: 2px;
+    /* background-image: url('../../../static/images/banner.png'); */
+    background-size: cover;
+    text-align: center;
+}
+
+.card-driver {
+    height: auto;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.card-position {
+    font-family: formulaOneBold;
+    font-size: 30px;
+    padding-top: 6px;
+    margin-left: 7px;
+}
+
+.card-name {
+    white-space: nowrap;
+    font-family: formulaOneRegular;
+    font-size: 20px;
+    text-align: right;
+    margin-left: 10px;
+}
+
+.card {
+    border-style: solid;
+    border-radius: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform .3s;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.card:hover {
+    border-left: none;
+    border-bottom: none;
+    border-width: 4px;
+    transform: scale(1.1);
+    filter: contrast(110%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    z-index: 99;
+}
+
+/* Card border change on hover */
+
+#red_bull:hover {
+    border-top-color: #000B8D;
+    border-right-color: #000B8D;
+}
+
+#alfa:hover {
+    border-top-color: #9d2235;
+    border-right-color: #9d2235;
+}
+
+#alphatauri:hover {
+    border-top-color: #01102f;
+    border-right-color: #01102f;
+}
+
+#alpine:hover {
+    border-top-color: #0756ab;
+    border-right-color: #0756ab;
+}
+
+#aston_martin:hover {
+    border-top-color: #0a5a4f;
+    border-right-color: #0a5a4f;
+}
+
+#ferrari:hover {
+    border-top-color: #db0c06;
+    border-right-color: #db0c06;
+}
+
+#haas:hover {
+    border-top-color: #f81034;
+    border-right-color: #f81034;
+}
+
+#mclaren:hover {
+    border-top-color: #ffa112;
+    border-right-color: #ffa112;
+}
+
+#mercedes:hover {
+    border-top-color: #019e95;
+    border-right-color: #019e95;
+}
+
+#williams:hover {
+    border-top-color: #70c6e5;
+    border-right-color: #70c6e5;
+}
+
+.card-text {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: -15px;
+}
+
+.card-text:last-child {
+    margin-bottom: 5px;
+}
+
+.card-body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.header-title {
+    text-align: center;
+    font-family: formulaOneRegular;
+    font-weight: bold;
+    font-size: 55px;
+    margin-bottom: 20px;
+}

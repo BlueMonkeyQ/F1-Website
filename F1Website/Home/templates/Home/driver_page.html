@@ -1,0 +1,84 @@
+{% extends 'F1Website/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+
+    <!-- Top Span -->
+    <div class="row">
+        <div class="col-12 top-span">
+            <h2 class="driver-name">{{driver_data.givenName}} {{driver_data.familyName}}</h2>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row">
+        <!-- Driver Photo -->
+        <div class="col-6">
+            <img class="driverimg" src="{% static 'images/' %}{{driver_data.familyName|add:'_Profile.jpeg'}}"
+                alt="">
+        </div>
+
+        <div class="col-6">
+            <div class="row">
+                <!-- Helmet photo -->
+                <div class="col-9 driver-helm">
+                    <img src="{% static 'images/' %}{{driver_data.familyName|add:'_Helmet.png'}}" alt=""
+                        height="250">
+                </div>
+                <div class="col-3 flag-box">
+                    <img class="driver-flg" src="{% static 'images/' %}{{driver_data.nationality|add:'.jpeg'}}"
+                        alt="">
+                    <h4 class="driver-num">{{driver_data.permanentNumber}}</h4>
+                    <!-- <img src="../../../static/images/33.png" height="70" /> -->
+                </div>
+                <div class="col-12">
+                    <!-- INFO -->
+                    <div class="info">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <span class="text">Country</span>
+                                    </th>
+                                    <td>{{driver_data.nationality}}</td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span class="text">Career Wins</span>
+                                    </th>
+                                    <td>{{driver_data.wins}}</td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span class="text">Career Points</span>
+                                    </th>
+                                    <td>{{driver_data.points}}</td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span class="text">Date of Birth</span>
+                                    </th>
+                                    <td>{{driver_data.dateOfBirth}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <!-- CHARTS -->
+    {% include "./race_history_chart.html" %}
+
+    <hr />
+
+    {% include "./race_history.html" %}
+    
+    
+    {% endblock %}
